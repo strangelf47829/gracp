@@ -7,9 +7,9 @@ gracp::gracp(std::string in, std::string out)
 	setOutput(out);
 
 	std::string headerFile = out;
-	char *hdFileName = headerFile.substr(0,headerFile.find("_c.cpp")).append("_c.h").data();
+	char *hdFileName = headerFile.substr(0,headerFile.find(".")).append(".h").data();
 	head.open(hdFileName);
-	hdFileName = headerFile.substr(0,headerFile.find(".cpp")).data();
+	hdFileName = headerFile.substr(0,headerFile.find(".")).data();
 	head << "#ifndef _GRACP_" << hdFileName << std::endl;
 	head << "#define _GRACP_" << hdFileName << std::endl;
 	//registerClass("counter");

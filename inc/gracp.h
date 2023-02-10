@@ -6,7 +6,7 @@
 
 #define _GRACP_AUTH "Rafael de Bie"
 #define _GRACP_COPY "(c) Rafael de Bie 2023"
-#define _GRACP_VERS "0.1"
+#define _GRACP_VERS "0.2"
 #define _GRACP_BUFFSIZE(_c) "16"
 
 

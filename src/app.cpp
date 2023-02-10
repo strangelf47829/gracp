@@ -12,7 +12,7 @@ int disp(bool isH)
 
 	if(!isH)
 	{
-		printf("version %s. (%s)\n",_GRACP_VERS,_GRACP_COPY);
+		printf("version %s (%s)\n",_GRACP_VERS,_GRACP_COPY);
 		printf("author: %s\n",_GRACP_AUTH);
 		return 0;
 	}
@@ -47,7 +47,7 @@ int main(int argc, const char **argv)
 		if(!arg1.compare("-v"))
 			return disp(false);
 		inp = arg1;
-		out = inp.substr(0,inp.find(".cpp")).append("_c.cpp");
+		out = inp.substr(0,inp.find(".")).append("_c.cpp");
 	}
 	else if(argc == 3)
 	{
@@ -57,7 +57,7 @@ int main(int argc, const char **argv)
 		{
 			copy = true;
 			inp = secon;
-			out = inp.substr(0,inp.find(".cpp")).append("_c.cpp");
+			out = inp.substr(0,inp.find(".")).append("_c.cpp");
 		} else if(!first.compare("-r"))
 		{
 			//printf("not implemented yet.. Sorry!\n");
