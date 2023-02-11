@@ -9,7 +9,7 @@ CX = g++
 ln = g++
 as = nasm
 
-SFLAGS = -c -O2
+SFLAGS = -c -g
 
 CFLAGS += $(SFLAGS)
 CXFLAGS += $(SFLAGS)
@@ -26,6 +26,7 @@ tgt = gracp
 pth = /usr/bin/$(tgt)
 
 default: all install
+
 
 restore:
 	rm test/counter_c.cpp

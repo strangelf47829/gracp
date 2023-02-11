@@ -70,9 +70,10 @@ void gracp::readFile()
 		{
 			//printf("new function definition found! %s", line.data());
 
-			char return_name[(int)_fn];
+			char return_name[(int)_fn+1];
 			for(int i = 0; i < (int)_fn; i++)
 				return_name[i] = *(line.data() + i);
+			return_name[(int)_fn] = '\0';
 			//"the type must come before the class name, so use that as the type variable
 			
 			
